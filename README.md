@@ -106,8 +106,8 @@ curl http://localhost:8080/v1/chat/completions \
 
 ## 🎉 Usage in n8n
 
-1. Create a new workflow or open an existing one
-2. Add an **AI Chat Model** node (or any OpenAI-compatible node)
+1. Create a new AI Agent or open an existing one
+2. Select OpenAi for chat model 
 3. Select the credential you created (e.g., `POE_API`)
 4. Choose your desired model from POE's available models
 5. Test the node to verify the connection
