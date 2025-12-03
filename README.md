@@ -2,9 +2,17 @@
 
 A comprehensive tutorial for integrating POE API with n8n using the poe2openai proxy server.
 
+## ❓ The Problem
+
+**POE API cannot be used natively in n8n.** There is no built-in POE node, and the API format is incompatible with existing n8n integrations.
+
+However, [POE](https://poe.com) provides access to a wide variety of AI models — including GPT-4o, Claude, Gemini, Llama, and many more — all through a single subscription. This makes it an attractive option for n8n workflows that require AI capabilities.
+
+**The Solution:** Use an OpenAI-compatible proxy to bridge POE API with n8n's existing OpenAI integration.
+
 ## 📖 Overview
 
-Using the POE API with native n8n nodes can be challenging. This tutorial demonstrates how to use [poe2openai](https://github.com/jeromeleong/poe2openai), an OpenAI-compatible proxy that allows you to seamlessly access POE's AI models within n8n workflows.
+This tutorial demonstrates how to use [poe2openai](https://github.com/jeromeleong/poe2openai), a proxy server that translates OpenAI API calls into POE API calls. This allows you to seamlessly access POE's AI models within n8n workflows using the native OpenAI credential.
 
 ## 🎯 Prerequisites
 
@@ -107,7 +115,7 @@ curl http://localhost:8080/v1/chat/completions \
 ## 🎉 Usage in n8n
 
 1. Create a new AI Agent or open an existing one
-2. Select OpenAi for chat model 
+2. Select *OpenAi* for chat model 
 3. Select the credential you created (e.g., `POE_API`)
 4. Choose your desired model from POE's available models
 5. Test the node to verify the connection
